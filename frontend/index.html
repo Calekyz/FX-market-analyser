@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Forex Chart Analyzer | AI-Powered Trading Signals</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Forex Chart Analyzer</h1>
+            <p>Take a photo or upload a chart → Get Entry, SL & TP instantly</p>
+        </div>
+        
+        <div class="card">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📸</div>
+                <h3>Upload Chart Image</h3>
+                <p>Click or drag & drop a chart screenshot/photo</p>
+                <small>Supported: JPG, PNG, JPEG</small>
+                <input type="file" id="fileInput" accept="image/*">
+                <button class="btn-secondary" onclick="document.getElementById('fileInput').click()">Choose File</button>
+            </div>
+            
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <img id="imagePreview" alt="Chart preview">
+                <button class="btn-reset" onclick="resetUpload()">✕ Change Image</button>
+            </div>
+            
+            <div class="analyze-container" id="analyzeContainer" style="display: none;">
+                <button class="btn-primary" id="analyzeBtn">🔍 Analyze Chart</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>🤖 AI is analyzing your chart...</p>
+            <small>This takes about 5-10 seconds</small>
+        </div>
+        
+        <div class="results card" id="results">
+            <h2>🎯 Trade Signal</h2>
+            <div id="signalContent"></div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-card">
+                <h3>📖 How It Works</h3>
+                <ol>
+                    <li>Upload a forex chart screenshot or photo</li>
+                    <li>AI identifies price levels, patterns, and trend</li>
+                    <li>System calculates Entry, Stop Loss, and Take Profit</li>
+                    <li>Get your trade plan with Risk:Reward ratio</li>
+                </ol>
+            </div>
+            
+            <div class="info-card">
+                <h3>⚡ Tips</h3>
+                <ul>
+                    <li>Use clear, well-lit screenshots</li>
+                    <li>Include the full chart with visible price scale</li>
+                    <li>Daily and 4-hour timeframes work best</li>
+                    <li>Make sure price labels are readable</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>⚠️ DISCLAIMER</strong><br>
+            This is AI-generated analysis for educational purposes only. Forex trading involves substantial risk of loss. 
+            Always conduct your own research and never trade more than you can afford to lose.
+        </div>
+        
+        <div class="footer">
+            Powered by Google Gemini AI | Forex Chart Intelligence System v1.0
+        </div>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
